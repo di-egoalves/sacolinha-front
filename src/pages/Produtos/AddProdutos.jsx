@@ -37,7 +37,7 @@ export function AddProdutos() {
         formData.append("usuarioId", autenticacao.id);
 
         axios
-            .post("https://e-commerce-server-ckvx.onrender.com/produtos", formData, {
+            .post("https://e-commerce-server-423z.onrender.com/produtos", formData, {
                 headers: {
                     Authorization: `Bearer ${autenticacao.token}`,
                 },

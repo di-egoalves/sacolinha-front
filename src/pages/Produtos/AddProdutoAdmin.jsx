@@ -18,7 +18,7 @@ export function AddProdutoAdmin() {
     }
 
     useEffect(() => {
-        axios.get(`https://e-commerce-server-ckvx.onrender.com/empreendedores`,
+        axios.get(`https://e-commerce-server-423z.onrender.com/empreendedores`,
             {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -48,7 +48,7 @@ export function AddProdutoAdmin() {
         formData.append("usuarioId", data.usuarioId);
 
         axios
-            .post("https://e-commerce-server-ckvx.onrender.com/produtos", formData, {
+            .post("https://e-commerce-server-423z.onrender.com/produtos", formData, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },

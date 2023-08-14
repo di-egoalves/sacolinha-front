@@ -36,7 +36,7 @@ export function ListaProdutos() {
 
     const buscarProd = (id) => {
         return axios
-            .get(`https://e-commerce-server-ckvx.onrender.com/produtos/${id}`)
+            .get(`https://e-commerce-server-423z.onrender.com/produtos/${id}`)
             .then((response) => {
                 return response.data;
             })
@@ -59,7 +59,7 @@ export function ListaProdutos() {
     const onDelete = async () => {
         try {
             await axios.delete(
-                `https://e-commerce-server-ckvx.onrender.com/produtos/${idProduto}`,
+                `https://e-commerce-server-423z.onrender.com/produtos/${idProduto}`,
                 {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -89,7 +89,7 @@ export function ListaProdutos() {
     async function initializeTable() {
         try {
             await axios
-                .get(`https://e-commerce-server-ckvx.onrender.com/produtos/empreendedores?usuarioId=${autenticacao.id}&page=${atualPage}&size=${10}&nome=${pesquisa}`, {
+                .get(`https://e-commerce-server-423z.onrender.com/produtos/empreendedores?usuarioId=${autenticacao.id}&page=${atualPage}&size=${10}&nome=${pesquisa}`, {
                     headers: {
                         Authorization: `Bearer ${autenticacao.token}`,
                     },
@@ -192,7 +192,7 @@ export function ListaProdutos() {
                                             <Card.Img
                                                 className="image p-3 rounded-5 w-50"
                                                 style={{ objectFit: 'cover', aspectRatio: '1/1', width: 'auto%', height: 'auto' }}
-                                                src={`https://e-commerce-server-ckvx.onrender.com/${produto.foto}`}
+                                                src={`https://e-commerce-server-423z.onrender.com/${produto.foto}`}
                                             />
                                         </Col>
                                         <td className="align-middle">
@@ -280,7 +280,7 @@ export function ListaProdutos() {
                                 <Col>
                                     <Image
                                         className="p-3 rounded-5 w-100"
-                                        src={`https://e-commerce-server-ckvx.onrender.com/${selecionaProd.foto}`}
+                                        src={`https://e-commerce-server-423z.onrender.com/${selecionaProd.foto}`}
                                         alt="Imagem"
                                     />
                                 </Col>

@@ -40,7 +40,7 @@ export function EditConsumidor() {
         formData.append("rua", data.rua);
         formData.append("numero", data.numero);
 
-        axios.put(`https://e-commerce-server-ckvx.onrender.com/consumidores/${id}`, formData, {
+        axios.put(`https://e-commerce-server-423z.onrender.com/consumidores/${id}`, formData, {
             headers: {
 
                 Authorization: `Bearer ${autenticacao.token}`,
@@ -62,7 +62,7 @@ export function EditConsumidor() {
     }
 
     useEffect(() => {
-        axios.get(`https://e-commerce-server-ckvx.onrender.com/consumidores/${id}`, {
+        axios.get(`https://e-commerce-server-423z.onrender.com/consumidores/${id}`, {
             headers: {
                 Authorization: `Bearer ${autenticacao.token}`,
             }

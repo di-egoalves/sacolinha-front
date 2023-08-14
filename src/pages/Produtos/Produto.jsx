@@ -56,12 +56,12 @@ export function Produto() {
 
     useEffect(() => {
         axios
-            .get(`https://e-commerce-server-ckvx.onrender.com/produtos/${id}`)
+            .get(`https://e-commerce-server-423z.onrender.com/produtos/${id}`)
             .then((response) => {
                 const data = response.data;
                 setProduct(data);
                 axios
-                    .get(`https://e-commerce-server-ckvx.onrender.com/empreendedores/${data.usuarioId}`)
+                    .get(`https://e-commerce-server-423z.onrender.com/empreendedores/${data.usuarioId}`)
                     .then((response) => {
                         const data = response.data;
                         setEmpreendedorNome(data.nome);
@@ -123,7 +123,7 @@ export function Produto() {
                         <Card.Img
                             className="image p-3 rounded-5"
                             style={{ objectFit: 'cover', aspectRatio: '1/1' }}
-                            src={`https://e-commerce-server-ckvx.onrender.com/${product.foto}`}
+                            src={`https://e-commerce-server-423z.onrender.com/${product.foto}`}
                         />
                         {product.desconto > 0 && dataDesconto && !isDiscountExpired ? (
                             <div className="bandeirinha">
