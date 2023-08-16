@@ -35,6 +35,15 @@ export function Home() {
   const dataHoje = `${ano}-${mes}-${dia}`;
 
   useEffect(() => {
+    const showAlert = localStorage.getItem("showAlert");
+
+    if (!showAlert) {
+      window.alert("Por favor, aguarde alguns instantes antes de navegar. Pode haver atrasos devido ao servidor backend gratuito.");
+      localStorage.setItem("showAlert", "true");
+    }
+  }, []);
+  
+  useEffect(() => {
     axios
       .get(`https://e-commerce-server-423z.onrender.com/produtos?page=${atualPage}&nome=${pesquisa}`)
       .then((response) => {
