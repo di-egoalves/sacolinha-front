@@ -38,7 +38,7 @@ export function Home() {
     const showAlert = localStorage.getItem("showAlert");
 
     if (!showAlert) {
-      window.alert("Por favor, aguarde alguns instantes antes de navegar. Pode haver atrasos devido ao servidor backend gratuito.");
+      window.alert("Por favor, aguarde os produtos carregarem antes de navegar. Pode haver atrasos devido ao servidor backend gratuito.");
       localStorage.setItem("showAlert", "true");
     }
   }, []);
